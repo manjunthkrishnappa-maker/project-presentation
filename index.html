@@ -34,6 +34,11 @@
         
         /* Print Styles */
         @media print {
+            * {
+                /* This forces the browser to print the background colors and gradients */
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
             body { background: white; padding: 0; }
             .a4-page { box-shadow: none; width: 210mm; height: 297mm; margin: 0; page-break-after: avoid; }
             .no-print { display: none; }
